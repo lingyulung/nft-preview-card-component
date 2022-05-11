@@ -1,0 +1,176 @@
+*,
+*--before,
+*--after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --softBlue: hsl(215, 51%, 70%);
+  --darkBlueLine: hsl(215, 32%, 27%);
+  --darkBlueMainBg: hsl(217, 54%, 11%);
+  --darkBlueCardBg: hsl(216, 50%, 16%);
+  --cyan: hsl(178, 100%, 50%);
+}
+
+body {
+  background-color: var(--darkBlueMainBg);
+}
+
+body p {
+  font-size: 18px;
+  color: var(--softBlue);
+  font-family: "Outfit", sans-serif;
+  line-height: 1.7;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nftContainer {
+  width: 20rem;
+  height: fit-content;
+  max-height: 40rem;
+  min-height: 28rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--darkBlueCardBg);
+  border-radius: 15px;
+}
+
+.image {
+  width: 90%;
+  margin-top: 1rem;
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+
+.nftImage {
+  width: 100%;
+  /* margin-top: 1rem; */
+  border-radius: 15px;
+  z-index: 1;
+}
+
+.imageOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--cyan);
+  z-index: 2;
+  opacity: 0;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 300ms;
+}
+
+.imageOverlay.active {
+  opacity: 30%;
+}
+
+.eyeIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.eyeIcon.active {
+  opacity: 100%;
+}
+
+.title {
+  width: 90%;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.title.active {
+  color: var(--cyan);
+}
+
+.description {
+  width: 90%;
+  margin-top: 0;
+}
+
+.nftInfo {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.cost {
+  color: var(--cyan);
+  display: inline;
+}
+
+.days {
+  display: inline;
+}
+
+.line {
+  width: 90%;
+  height: 1px;
+  background-color: var(--darkBlueLine);
+}
+
+.creator {
+  width: 90%;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.creatorImage {
+  height: 2rem;
+}
+
+.createdBy {
+  width: 70%;
+  margin-left: 1rem;
+}
+
+.creatorName {
+  color: var(--white);
+  cursor: pointer;
+}
+
+.creatorName.active {
+  color: var(--cyan);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--white);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
